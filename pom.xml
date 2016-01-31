@@ -4,8 +4,8 @@
  
   <groupId>com.mullins.docker</groupId>
   <artifactId>hello-spark</artifactId>
-  <version>1.0</version>
-  <packaging>war</packaging>
+  <version>1.0.2</version>
+  <packaging>jar</packaging>
  
   <name>Maven Quick Start Archetype</name>
   <url>http://maven.apache.org</url>
