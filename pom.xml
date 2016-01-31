@@ -9,6 +9,11 @@
  
   <name>Maven Quick Start Archetype</name>
   <url>http://maven.apache.org</url>
+
+  <scm>
+    <connection>scm:git:git@github.com:dmullins78/hello-docker.git</connection>
+    <developerConnection>scm:git:git@github.com:dmullins78/hello-docker.git</developerConnection>
+  </scm>
  
   <dependencies>
     <dependency>
