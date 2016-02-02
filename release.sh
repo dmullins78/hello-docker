@@ -4,6 +4,7 @@ mvn clean \
   scm:tag -Dtag=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.incrementalVersion} \
   versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.nextIncrementalVersion} \
   versions:commit \
-  scm:checkin -Dbasedir='./' -Dmessage='Releasing...' 
+  scm:checkin -Dbasedir='./' -Dmessage='Releasing...' \
+  docker:build -DpushImageTag
 
 
