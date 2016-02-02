@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.mullins.docker</groupId>
   <artifactId>hello-spark</artifactId>
-  <version>1.0.${parsedVersion.nextIncrementalVersion}</version>
+  <version>1.0.1</version>
   <packaging>war</packaging>
 
   <scm>
