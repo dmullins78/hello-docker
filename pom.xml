@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.mullins.docker</groupId>
   <artifactId>hello-spark</artifactId>
-  <version>1.0.9</version>
+  <version>1.0.10</version>
   <packaging>war</packaging>
 
   <scm>
@@ -87,6 +87,8 @@
           <imageName>hello-docker</imageName>
           <imageName>192.168.99.100:8043/hello-docker</imageName>
           <dockerDirectory>.</dockerDirectory>
+          <serverId>docker-local</serverId>
+          <registryUrl>https://192.168.99.100:8043/</registryUrl>
           <imageTags>
              <imageTag>${project.version}</imageTag>
              <!--<imageTag>192.168.99.100:8043/${project.version}</imageTag>-->
