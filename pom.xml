@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.mullins.docker</groupId>
   <artifactId>hello-spark</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>war</packaging>
 
   <scm>
@@ -103,24 +103,23 @@
           </execution>
         </executions>
       </plugin>
-      <!--<plugin>-->
-        <!--<groupId>org.codehaus.mojo</groupId>-->
-        <!--<artifactId>build-helper-maven-plugin</artifactId>-->
-        <!--<version>1.7</version>-->
-        <!--<executions>-->
-          <!--<execution>-->
-            <!--<phase>validate</phase>-->
-            <!--<id>parse-version</id>-->
-            <!--<goals>-->
-              <!--<goal>parse-version</goal>-->
-            <!--</goals>-->
-            <!--<configuration>-->
-                <!--<propertyPrefix>parsedVersion</propertyPrefix>-->
-            <!--</configuration>-->
-          <!--</execution>-->
-        <!--</executions>-->
-      <!--</plugin>-->
-
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.10</version>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <id>parse-version</id>
+            <goals>
+              <goal>parse-version</goal>
+            </goals>
+            <configuration>
+                <propertyPrefix>parsedVersion</propertyPrefix>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 
