@@ -1,7 +1,8 @@
 #mvn clean \
   #verify \
-mvn build-helper:parse-version scm:tag -Dtag=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.incrementalVersion} \
-  build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.incrementalVersion} \
+  #scm:tag -Dtag=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.incrementalVersion} \
+  mvn build-helper:parse-version \
+  versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.3 \
   scm:checkin -Dbasedir='./' -Dmessage='Releasing...' \
-  
+
 
