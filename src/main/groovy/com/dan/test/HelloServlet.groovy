@@ -10,8 +10,10 @@ import javax.servlet.http.*;
 public class HelloServlet extends HttpServlet {
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    String mode = System.getenv("HELLO_MODE")
+
     PrintWriter out = response.getWriter()
-    out.println("Hello World")
+    out.println("Hello World " + mode)
     out.close()
   }
 }
