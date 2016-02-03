@@ -13,7 +13,7 @@ public class HelloServlet extends HttpServlet {
     String mode = System.getenv("HELLO_MODE")
 
     PrintWriter out = response.getWriter()
-    out.println("Hello World " + mode)
+    out.println("Hello from  " + mode)
     out.close()
   }
 }
