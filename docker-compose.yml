@@ -1,4 +1,4 @@
-nginx:
+loadbalancer:
   build: ./httpd
   #build: ./nginx
   ports:
