@@ -1,6 +1,5 @@
 loadbalancer:
   build: ./httpd
-  #build: ./nginx
   ports:
     - "9898:80"
   links:
