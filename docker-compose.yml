@@ -17,7 +17,7 @@ appone:
   links:
     - memcached:memcached
 apptwo:  
-  image: 192.168.99.100:8043/hello-docker:1.0.34
+  image: 192.168.99.100:8043/hello-docker:1.0.36
   ports:
     - "9877:8009"
     - "9777:8080"
