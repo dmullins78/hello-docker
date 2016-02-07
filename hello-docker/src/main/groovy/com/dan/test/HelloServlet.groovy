@@ -13,7 +13,7 @@ public class HelloServlet extends HttpServlet {
     String mode = System.getenv("HELLO_MODE")
 
     String sv = request.getParameter("secretValue")
-    if(sv) {
+    if(sv != null) {
       request.getSession().setAttribute("sv", sv) 
     }
 
