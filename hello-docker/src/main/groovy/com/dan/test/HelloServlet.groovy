@@ -14,12 +14,12 @@ public class HelloServlet extends HttpServlet {
 
     String sv = request.getParameter("secretValue")
     if(sv) {
-      request.getSession().setValue("sv", sv) 
+      request.getSession().setAttribute("sv", sv) 
     }
 
     PrintWriter out = response.getWriter()
     out.println("Hello from  " + mode)
-    out.println("SV is  " + request.getSession().getValue("sv"))
+    out.println("SV is  " + request.getSession().getAttribute("sv"))
     out.close()
   }
 }
