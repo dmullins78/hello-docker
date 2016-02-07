@@ -9,16 +9,19 @@ import javax.servlet.http.*;
 @WebServlet(urlPatterns=["/hello"], name="HelloTest")
 public class HelloServlet extends HttpServlet {
 
+  String secretValue;
+
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     String mode = System.getenv("HELLO_MODE")
 
-    Map<String, String> env = System.getenv();
-    for (String envName : env.keySet()) {
-      System.out.format("%s=%s%n", envName, env.get(envName));
+    String sv = request.getParameter("secretValue")
+    if(sv) {
+      secretValue = sv
     }
 
     PrintWriter out = response.getWriter()
     out.println("Hello from  " + mode)
+    out.println("SV is  " + secretValue)
     out.close()
   }
 }

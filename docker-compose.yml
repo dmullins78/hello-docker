@@ -8,12 +8,12 @@ loadbalancer:
 appone:  
   image: 192.168.99.100:8043/hello-docker:1.0.19
   ports:
-    - "9876:8080"
+    - "9876:8009"
   environment:
     - HELLO_MODE=appone
 apptwo:  
   image: 192.168.99.100:8043/hello-docker:1.0.19
   ports:
-    - "9877:8080"
+    - "9877:8009"
   environment:
     - HELLO_MODE=apptwo
