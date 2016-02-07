@@ -12,7 +12,7 @@ public class HelloServlet extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     String mode = System.getenv("HELLO_MODE")
     PrintWriter out = response.getWriter()
-    out.println("Hello from  " + mode + "<br>")
+    out.println("2 Hello from  " + mode + "<br>")
 
     request.getSession().setAttribute("LAST ACCESSED", "" + System.currentTimeMillis() + "<br>") 
 
