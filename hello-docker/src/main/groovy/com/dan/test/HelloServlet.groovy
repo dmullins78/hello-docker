@@ -15,12 +15,18 @@ public class HelloServlet extends HttpServlet {
     String sv = request.getParameter("secretValue")
     if(sv != null) {
       System.out.println("Setting SV to ${sv}")
-      request.getSession().setAttribute("sv", sv) 
+        request.getSession().setAttribute("sv", sv) 
     }
 
     PrintWriter out = response.getWriter()
     out.println("Hello from  " + mode)
-    out.println(request.getSession().isNew() + " SV is  " + request.getSession().getAttribute("sv"))
+
+    Enumeration keys = session.getAttributeNames();
+    while (keys.hasMoreElements()) {
+      String key = (String)keys.nextElement();
+      out.println(key + ": " + session.getValue(key) + "<br>");
+    }
+
     out.close()
   }
 }
