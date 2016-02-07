@@ -1,27 +1,29 @@
-loadbalancer:
-  build: ./httpd
-  ports:
-    - "9898:80"
-  links:
-   - appone:web1
-   - apptwo:web2
+#loadbalancer:
+  #build: ./httpd
+  #ports:
+    #- "9898:80"
+  #links:
+   #- appone:web1
+   #- apptwo:web2
 memcached:
-  image: memcached:latest
-appone:  
-  image: 192.168.99.100:8043/hello-docker:1.0.34
+  image: memcached
   ports:
-    - "9876:8009"
-    - "9776:8080"
-  environment:
-    - HELLO_MODE=appone
-  links:
-    - memcached:memcached
-apptwo:  
-  image: 192.168.99.100:8043/hello-docker:1.0.36
-  ports:
-    - "9877:8009"
-    - "9777:8080"
-  environment:
-    - HELLO_MODE=apptwo
-  links:
-    - memcached:memcached
+    - "11211:11211"
+#appone:  
+  #image: 192.168.99.100:8043/hello-docker:1.0.37
+  #ports:
+    #- "9876:8009"
+    #- "9776:8080"
+  #environment:
+    #- HELLO_MODE=appone
+  #links:
+    #- memcached:memcached
+#apptwo:  
+  #image: 192.168.99.100:8043/hello-docker:1.0.37
+  #ports:
+    #- "9877:8009"
+    #- "9777:8080"
+  #environment:
+    #- HELLO_MODE=apptwo
+  #links:
+    #- memcached:memcached
