@@ -1,0 +1,9 @@
+./apache-balancer.sh -s 192.168.99.101 -p 9898 list-worker app_cluster
+
+./release.sh
+
+./apache-balancer.sh -s 192.168.99.101 -p 9898 disable app_cluster http://web1:8080
+
+docker-compose up -d --no-deps appone
+
+./apache-balancer.sh -s 192.168.99.101 -p 9898 enable app_cluster http://web1:8080

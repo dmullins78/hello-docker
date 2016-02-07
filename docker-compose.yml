@@ -10,7 +10,7 @@ memcached:
   ports:
     - "11211:11211"
 appone:  
-  image: 192.168.99.100:8043/hello-docker:1.0.39
+  image: 192.168.99.100:8043/hello-docker:1.0.40
   ports:
     - "9876:8009"
     - "9776:8080"
