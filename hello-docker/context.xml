@@ -4,7 +4,7 @@
   <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
 
   <Manager className="de.javakaffee.web.msm.MemcachedBackupSessionManager"
-    memcachedNodes="n1:192.168.99.101:11211"
+    memcachedNodes="n1:memcached:11211"
     sticky="false"
     sessionBackupAsync="false"
     lockingMode="uriPattern:/path1|/path2"
