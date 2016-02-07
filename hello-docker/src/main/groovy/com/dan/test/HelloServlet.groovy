@@ -12,6 +12,8 @@ public class HelloServlet extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     String mode = System.getenv("HELLO_MODE")
 
+    request.getSession().setAttribute("LAST ACCESSED", "" + System.currentTimeMillis) 
+
     String sv = request.getParameter("secretValue")
     if(sv != null) {
       System.out.println("Setting SV to ${sv}")
@@ -19,12 +21,13 @@ public class HelloServlet extends HttpServlet {
     }
 
     PrintWriter out = response.getWriter()
-    out.println("Hello from  " + mode)
+    out.println("Hello from  " + mode + "<br>")
 
-    Enumeration keys = session.getAttributeNames();
+    out.println("Session Values <br>" )
+    Enumeration keys = session.getAttributeNames()
     while (keys.hasMoreElements()) {
-      String key = (String)keys.nextElement();
-      out.println(key + ": " + session.getValue(key) + "<br>");
+      String key = (String)keys.nextElement()
+      out.println(key + ": " + session.getValue(key) + "<br>")
     }
 
     out.close()
